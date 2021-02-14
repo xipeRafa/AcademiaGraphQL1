@@ -3,10 +3,15 @@ type Query {
      "Lista de estudiantes"
       estudiantes: [Estudiante!]!
 
-      "estudiante por id"
+     "estudiante por id"
       estudiante(id: ID!): Estudiante!
-          "Lista de cursos"
+
+      "Lista de cursos"
       cursos: [Curso!]!
+
+      
+     "Curso por id"
+      curso(curso: ID!): Curso!
 }
 
 "informacion de estudiantes"
@@ -22,7 +27,7 @@ type Estudiante {
 type Curso{
      id: ID!
      title: String!
-     dscription: String!
+     description: String!
      clases: Int!
      time: Float!
      logo: String!
@@ -33,11 +38,12 @@ type Curso{
      reviews: [Valoracion!]!
 }
 
-enum Nivel {
-     TODOS
-     NOVATOS
-     INTERMEDIO
-     EXPERTO
+enum Nivel { 
+     "cambie los valores de español a ingles"
+     ALL
+     BEGINNER
+     MEDIUM
+     EXPERT
 }
 
 type Valoracion{
