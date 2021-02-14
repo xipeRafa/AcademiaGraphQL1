@@ -18,6 +18,9 @@ const query : IResolvers = {
 
 
                   return resultado
+            },
+            cursos(): any {
+                  return database.cursos
             }
       }
 }
