@@ -21,9 +21,21 @@ type Mutation {
 
     "Opción para modificar / actualizar la información de un curso seleccionado"
     modificarCurso(curso: CursoInput!) : Curso!
-    
+
     "Opción para eliminar / borrar la información de un curso seleccionado mediante el ID"
     eliminarCurso(id: ID!): Curso!
+}
+
+input CursoInput {
+    id: ID
+    title: String!
+    description: String!
+    clases: Int!
+    time: Float!
+    logo: String!
+    level: Nivel=ALL
+    path: String!
+    teacher: String!
 }
 
 "informacion de estudiantes"
