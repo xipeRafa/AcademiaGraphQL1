@@ -14,6 +14,18 @@ type Query {
       curso(curso: ID!): Curso!
 }
 
+"Operaciones para añadir, editar o eliminar información"
+type Mutation {
+    "Opción para añadir la información de un nuevo curso"
+    cursoNuevo(curso: CursoInput!): Curso!
+
+    "Opción para modificar / actualizar la información de un curso seleccionado"
+    modificarCurso(curso: CursoInput!) : Curso!
+    
+    "Opción para eliminar / borrar la información de un curso seleccionado mediante el ID"
+    eliminarCurso(id: ID!): Curso!
+}
+
 "informacion de estudiantes"
 type Estudiante {
      "identificativo Éstudiante"
